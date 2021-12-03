@@ -25,10 +25,11 @@ type devdConn struct {
 	conn net.Conn
 }
 
-func newOSMon(logf logger.Logf, _ *Mon) (osMon, error) {
+func newOSMon(logf logger.Logf, m *Mon) (osMon, error) {
 	conn, err := net.Dial("unixpacket", "/var/run/devd.seqpacket.pipe")
 	if err != nil {
-		return nil, fmt.Errorf("devd dial error: %v", err)
+		logf("monitor_freebsd: devd dial error, falling back to polling mode: %v", err)
+		return newPollingMon(logf, m)
 	}
 	return &devdConn{conn}, nil
 }
