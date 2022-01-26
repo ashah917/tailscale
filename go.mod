@@ -10,12 +10,12 @@ require (
 	github.com/coreos/go-iptables v0.6.0
 	github.com/creack/pty v1.1.16
 	github.com/dave/jennifer v1.4.1
-	github.com/frankban/quicktest v1.13.1
+	github.com/frankban/quicktest v1.14.1
 	github.com/gliderlabs/ssh v0.3.3
 	github.com/go-multierror/multierror v1.0.2
 	github.com/go-ole/go-ole v1.2.5
 	github.com/godbus/dbus/v5 v5.0.5
-	github.com/google/go-cmp v0.5.6
+	github.com/google/go-cmp v0.5.7
 	github.com/google/uuid v1.3.0
 	github.com/goreleaser/nfpm v1.10.3
 	github.com/iancoleman/strcase v0.2.0
